@@ -1,0 +1,6 @@
+@Professions.WebAPi_HostAddress = http://localhost:5197
+
+GET {{Professions.WebAPi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
