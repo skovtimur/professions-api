@@ -1,4 +1,6 @@
-namespace Professions.Domain.Entities;
+using Professions.Domain;
+
+namespace Professions.Infrastructure.Entities;
 
 public class ProfessionSkillEntity
 {
@@ -9,12 +11,4 @@ public class ProfessionSkillEntity
     public SkillEntity Skill { get; set; } = null!;
     
     public SkillLevel Level { get; set; } = SkillLevel.None;
-}
-
-public enum SkillLevel
-{
-    None = 0,
-    Junior = 1,
-    Middle = 2,
-    Senior = 3
 }

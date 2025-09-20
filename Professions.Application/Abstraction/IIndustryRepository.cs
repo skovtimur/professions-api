@@ -1,5 +1,4 @@
 using Professions.Domain.Dtos;
-using Professions.Domain.Entities;
 
 namespace Professions.Application.Abstraction;
 

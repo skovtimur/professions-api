@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Professions.Domain.Entities;
+using Professions.Infrastructure.Entities;
 
 namespace Professions.Infrastructure;
 

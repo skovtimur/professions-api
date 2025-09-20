@@ -1,9 +1,8 @@
 namespace Professions.Domain.Dtos;
 
-public class SkillDtoToView
+public class SkillPartialDtoToView
 {
     public required Guid Id { get; init; }
     public required string SkillName { get; init; }
-
-    public List<ProfessionPartialSkillDtoToView> Professions { get; init; } = [];
+    public required SkillLevel Level { get; init; }
 }

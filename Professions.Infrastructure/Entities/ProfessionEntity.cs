@@ -1,4 +1,4 @@
-namespace Professions.Domain.Entities;
+namespace Professions.Infrastructure.Entities;
 
 public class ProfessionEntity : BaseEntity
 {

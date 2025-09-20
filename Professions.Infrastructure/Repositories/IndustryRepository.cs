@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Professions.Application.Abstraction;
 using Professions.Domain.Dtos;
-using Professions.Domain.Entities;
 
 namespace Professions.Infrastructure.Repositories;
 

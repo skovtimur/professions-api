@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Professions.Application.Abstraction;
 using Professions.Domain.Dtos;
-using Professions.Domain.Entities;
 
 namespace Professions.Infrastructure.Repositories;
 
@@ -41,10 +40,11 @@ public class ProfessionRepository(MainDbContext context) : IProfessionRepository
             .Select(x => new ProfessionDtoToView
             {
                 Id = x.Id,
-                Industry = x.Industry,
+                Industry = new IndustryDtoToView { Id = x.IndustryId, IndustryName = x.Industry.IndustryName },
                 IndustryId = x.IndustryId,
                 ProfessionName = x.ProfessionName,
-                Skills = x.Skills
+                Skills = x.Skills.Select(y => new SkillPartialDtoToView
+                    { Id = y.SkillId, SkillName = y.Skill.SkillName, Level = y.Level }).ToList()
             })
             .ToListAsync();
 
